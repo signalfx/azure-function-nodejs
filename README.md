@@ -23,9 +23,9 @@ Wrap your function handler
 ```
 'use strict';
 
-const signalFxAzureFunctions = require('signalfx-azure-functions');
+const signalFxAzureFunction = require('signalfx-azure-functions');
 
-module.exports = signalFxAzure.wrapper((context, some_binding_obj, callback) => {
+module.exports = signalFxAzureFunction.wrapper((context, some_binding_obj, callback) => {
   context.res = myFunc(context, some_binding_obj);
   callback();
 });
@@ -52,7 +52,7 @@ SIGNALFX_INGEST_ENDPOINT=[https://pops.signalfx.com]
 
 ### Metrics and dimensions sent by the wrapper
 
-The Lambda wrapper sends the following metrics to SignalFx:
+The function wrapper sends the following metrics to SignalFx:
 
 | Metric Name  | Type | Description |
 | ------------- | ------------- | ---|
@@ -60,7 +60,7 @@ The Lambda wrapper sends the following metrics to SignalFx:
 | azure.function.errors  | Counter  | Count number of errors from underlying function handler|
 | azure.function.duration  | Gauge  | Milliseconds in execution time of underlying function handler|
 
-The Lambda wrapper adds the following dimensions to all data points sent to SignalFx:
+The function wrapper adds the following dimensions to all data points sent to SignalFx:
 
 | Dimension | Description |
 | ------------- | ---|
@@ -71,16 +71,16 @@ The Lambda wrapper adds the following dimensions to all data points sent to Sign
 | is_Azure_Function  | Used to differentiate between Azure App Service and Azure Function metrics |
 | metric_source | The literal value of 'azure_function_wrapper' |
 
-### Sending a metric from the Lambda function
+### Sending a metric from the Azure function
 
 ```
 'use strict';
 
-const signalFxAzureFunctions = require('signalfx-azure-functions');
+const signalFxAzureFunction = require('signalfx-azure-functions');
 
-module.exports = signalFxAzure.wrapper((context, some_binding_obj, callback) => {
+module.exports = signalFxAzureFunction.wrapper((context, some_binding_obj, callback) => {
   ....
-  signalFxLambda.helper.sendGauge('gauge.name', value);
+  signalFxAzureFunction.helper.sendGauge('gauge.name', value);
   callback();
 });
 ```
