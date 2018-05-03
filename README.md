@@ -31,6 +31,10 @@ module.exports = signalFxAzure.wrapper((context, some_binding_obj, callback) => 
 });
 ```
 
+- By default, only 1 binding trigger object is passed through the wrapper. If you have multiple, you may need to modify your function to access them through the context object (e.g. `context.bindings.myInput`).
+- The function wrapper will call `context.done()` in the callback itself.
+
+
 
 ### Environment Variables
 
