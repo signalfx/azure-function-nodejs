@@ -26,7 +26,7 @@ Wrap your function handler
 const signalFxAzureFunctions = require('signalfx-azure-functions');
 
 module.exports = signalFxAzure.wrapper((context, some_binding_obj, callback) => {
-  context.res = myFunc(context);
+  context.res = myFunc(context, some_binding_obj);
   callback();
 });
 ```
