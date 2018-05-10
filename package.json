@@ -1,5 +1,5 @@
 {
-  "name": "signalfx-azure-function",
+  "name": "signalfx-azure-functions",
   "version": "0.0.10",
   "description": "Node.js Azure functions wrapper for SignalFx",
   "homepage": "https://signalfx.com",
@@ -9,7 +9,7 @@
     "url": "https://signalfx.com"
   },
   "license": "Apache-2.0",
-  "main": "signalfx-azure-function",
+  "main": "signalfx-azure-functions",
   "dependencies": {
     "signalfx": "6.0.0"
   },
