@@ -11,7 +11,7 @@
   "license": "Apache-2.0",
   "main": "signalfx-azure-function",
   "dependencies": {
-    "signalfx": "5.0.0"
+    "signalfx": "6.0.0"
   },
   "bundledDependencies": [
     "signalfx"
