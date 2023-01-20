@@ -1,16 +1,15 @@
 >ℹ️&nbsp;&nbsp;SignalFx was acquired by Splunk in October 2019. See [Splunk SignalFx](https://www.splunk.com/en_us/investor-relations/acquisitions/signalfx.html) for more information.
 
 > # :warning: Deprecation Notice
-> **The SignalFx NodeJs Azure Function Wrapper is deprecated and will reach End of Support on Jan 20, 2024. After that date, this repository will be archived and no longer receive updates. Until then, only critical security fixes and bug fixes will be provided.**
+> **The SignalFx Node.js Azure Function Wrapper is deprecated and will reach End of Support on Jan 20, 2024. After that date, this repository will be archived and no longer receive updates. Until then, only critical security fixes and bug fixes will be provided.**
 
-# SignalFx Node Azure Function Wrapper
+# SignalFx Node.js Azure Function Wrapper
 
-SignalFx Node Azure Function Wrapper.
+SignalFx Node.js Azure Function Wrapper.
 
 ## Usage
 
-
-The SignalFx NodeJS Azure Function Wrapper is a wrapper around an Azure Function NodeJS function handler, used to instrument execution of the function and send metrics to SignalFx.
+The SignalFx Node.js Azure Function Wrapper is a wrapper around an Azure Function NodeJS function handler, used to instrument execution of the function and send metrics to SignalFx.
 
 ### Installation
 
